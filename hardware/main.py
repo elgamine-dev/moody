@@ -34,35 +34,14 @@ def main():
 
 	    # if state_happy == False:
 	    if True:
-			print('Button Happy Pressed')
-
-			value = VALUE_HAPPY
-			day = datetime.date.today()
-			now = datetime.datetime.now()
-			postFirebase(value, day, now)
-
-			time.sleep(0.5)
+			onButtonPressed(VALUE_HAPPY)
 
 	    # if state_medium == False:
 	    elif True:
-			print('Button Medium Pressed')
-
-			value = VALUE_MEDIUM
-			day = datetime.date.today()
-			now = datetime.datetime.now()
-			postFirebase(value, day, now)
-
-			time.sleep(0.5)
+			onButtonPressed(VALUE_MEDIUM)
 		# if state_sad == False:
 	    elif True:
-			print('Button SAD Pressed')
-
-			value = VALUE_SAD
-			day = datetime.date.today()
-			now = datetime.datetime.now()
-			postFirebase(value, day, now)
-
-			time.sleep(0.5)
+			onButtonPressed(VALUE_SAD)
 
 
 def initFirebase():
@@ -79,10 +58,9 @@ def postFirebase(value, day, timestamp):
 	result = firebase.post(FIREBASE_DATABASE_NODE+ str(day), new_mood)
 	print result
 
-def onButtonPressed():
-	print('Button SAD Pressed')
+def onButtonPressed(value):
+	print('Button ' + value + ' Pressed')
 
-	value = VALUE_SAD
 	day = datetime.date.today()
 	now = datetime.datetime.now()
 	postFirebase(value, day, now)
