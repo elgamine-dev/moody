@@ -1,8 +1,7 @@
 # import RPi.GPIO as GPIO
-import time
 from firebase import firebase
+import time
 import datetime
-
 
 
 # Firebase infos
@@ -29,7 +28,7 @@ def main():
 	while True:
 	    # state_happy = GPIO.input(PIN_HAPPY)
 	    # if state_happy == False:
-	    if true:
+	    if True:
 			print('Button Happy Pressed')
 
 			value = VALUE_HAPPY
@@ -41,16 +40,17 @@ def main():
 
 
 def initFirebase():
+	global firebase
 	firebase = firebase.FirebaseApplication(FIREBASE_DATABASE_URL, None)
 
 def postFirebase(value, day, timestamp):
 	new_mood = {
-		"value" : "HAPPY",
-		"day" : str(today),
-		"ts" : str(now)
+		"value" : value,
+		"day" : str(day),
+		"ts" : str(timestamp)
 	};
 
-	result = firebase.post(FIREBASE_DATABASE_NODE+ str(today), new_mood)
+	result = firebase.post(FIREBASE_DATABASE_NODE+ str(day), new_mood)
 	print result
 
 
