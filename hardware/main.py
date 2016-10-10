@@ -14,9 +14,9 @@ VALUE_MEDIUM = "MEDIUM"
 VALUE_SAD = "SAD"
 
 # Setup GPIO
-PIN_HAPPY = 17;
-# PIN_MEDIUM = 27;
-# PIN_SAD = 17;
+PIN_HAPPY = 22; # Pin 15
+PIN_MEDIUM = 27; # Pin 13
+PIN_SAD = 17; # Pin 11
 
 # GPIO.setmode(GPIO.BCM)
 # GPIO.setup(PIN_HAPPY, GPIO.IN, pull_up_down=GPIO.PUD_UP)
@@ -35,7 +35,6 @@ def main():
 	    # if state_happy == False:
 	    if True:
 			onButtonPressed(VALUE_HAPPY)
-
 	    # if state_medium == False:
 	    elif True:
 			onButtonPressed(VALUE_MEDIUM)
