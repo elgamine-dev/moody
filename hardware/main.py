@@ -1,12 +1,13 @@
 # import RPi.GPIO as GPIO
 from firebase import firebase
+import config
 import time
 import datetime
 
 
 # Firebase infos
-FIREBASE_DATABASE_URL = 'https://break-manager-ac99b.firebaseio.com'
-FIREBASE_DATABASE_NODE = '/moody/days/'
+FIREBASE_DATABASE_URL = config.FIREBASE_DATABASE_URL
+FIREBASE_DATABASE_NODE = config.FIREBASE_DATABASE_NODE
 
 # Values infos
 VALUE_HAPPY = "HAPPY"
