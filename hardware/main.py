@@ -58,6 +58,7 @@ def postFirebase(value, day, timestamp):
 
 	result = firebase.post(FIREBASE_DATABASE_NODE+ str(day), new_mood)
 	print result
+	time.sleep(2)
 
 def onButtonPressed(value):
 	print('Button ' + value + ' Pressed')
