@@ -58,7 +58,7 @@ def postFirebase(value, day, timestamp):
 
 	result = firebase.post(FIREBASE_DATABASE_NODE+ str(day), new_mood)
 	print result
-	time.sleep(2)
+	time.sleep(2.5)
 
 def onButtonPressed(value):
 	print('Button ' + value + ' Pressed')
@@ -69,7 +69,6 @@ def onButtonPressed(value):
 	postFirebase(value, day, now)
 	
 	GPIO.output(PIN_LED,GPIO.HIGH)
-	# time.sleep(0.5)
 
 if __name__ == '__main__':
 	try:
